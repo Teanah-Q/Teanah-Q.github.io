@@ -1,0 +1,198 @@
+@charset "utf-8";
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #28333d;
+}
+
+p{
+  font-family: "Times New Roman", Times, serif;
+  color: #28333d;
+}
+
+header {
+    text-align: center;
+    -webkit-text-stroke: 1px #959a9f;
+    color: white;
+    background-color: #007bff;
+    padding: 1rem 0;
+    background-image: url(images/heading-bg.PNG);
+    background-size: contain;
+}
+
+#main {
+    transition: margin-left .5s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar {
+    justify-content: center;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(145, 176, 224);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.sidebar button:hover {
+  color: #818181;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 350px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-list {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.task button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.overdue-list {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#homepage {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#col66 {
+  max-width: 66%;
+  display: inline-block;
+  left: 0;
+}
+
+#col33{
+  max-width: 33%;
+  display: inline-block;
+  right: 0;
+  top: 0;
+  background-color: #fff27a;
+}
+
+/* Box container with rounded corners */
+.box {
+  border-radius: 25px;
+  border: 2px solid #2321ad;
+  background: linear-gradient(to right, #3494E6, #818181); 
+  padding: 20px;
+  width: 90%;
+  height: 90%;
+}
+
+
+/* Photo container */
+.photo-container {
+  max-width: 60%;
+  background-color: antiquewhite;
+  border-radius: 25px;
+  border: 2px solid antiquewhite;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.numbertext, .title{
+  text-align: center;
+}
+
+.photo {
+  display: none;
+}
+
+.theimage{
+  max-height: 750px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Next & previous buttons */
+.prev_slide, .next_slide {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev_slide {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next_slide {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
