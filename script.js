@@ -168,3 +168,8 @@ function clearAllTasks() {
 }
 
 document.getElementById("clear-all").addEventListener("click", clearAllTasks);
+
+function loadSettings() {
+    openNav();
+    openTab(event, 'home');
+}
