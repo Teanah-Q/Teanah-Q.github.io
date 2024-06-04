@@ -35,6 +35,7 @@ const addTaskButton = document.getElementById("add-task");
 const taskList = document.getElementById("task-list");
 const overdueList = document.getElementById("overdue-list");
 const task_count = document.getElementById("task_count");
+const doneList = documenet.getElementById("done-list");
 
 let count = 0;
 
@@ -91,6 +92,10 @@ taskList.addEventListener("click", (event) => {
         taskItem.style.backgroundColor = "#f2f2f2";
         event.target.disabled = true;
 
+        // remove Task from TaskList and add to DoneList
+        taskList.removeChild(taskItem);
+        doneList.appendChild(TaskItem);
+        
         // decrease task count
         count--;
         task_count.textContent = `You have ${count} tasks left.`;
@@ -124,9 +129,8 @@ function populateTaskList() {
 
 window.addEventListener("load", populateTaskList);
 
-/** HOME PAGE STATS */
-// add
 
+/** HOME PAGE */
 // loop through the photos
 let index = 1;
 displayPhoto(1);
