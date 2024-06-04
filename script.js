@@ -35,7 +35,7 @@ const addTaskButton = document.getElementById("add-task");
 const taskList = document.getElementById("task-list");
 const overdueList = document.getElementById("overdue-list");
 const task_count = document.getElementById("task_count");
-const doneList = documenet.getElementById("done-list");
+const doneList = document.getElementById("done-list");
 
 let count = 0;
 
