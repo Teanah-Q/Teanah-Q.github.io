@@ -94,7 +94,7 @@ taskList.addEventListener("click", (event) => {
 
         // remove Task from TaskList and add to DoneList
         taskList.removeChild(taskItem);
-        doneList.appendChild(TaskItem);
+        doneList.appendChild(taskItem);
         
         // decrease task count
         count--;
